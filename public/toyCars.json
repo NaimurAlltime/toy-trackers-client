@@ -1,0 +1,83 @@
+[
+  {
+    "_id": "1",
+    "name": "Rice Racer",
+    "sub-category_id": 1,
+    "sub-category_name": "Sports Car",
+    "image": "https://img.freepik.com/free-photo/fun-trex-3d-illustration_183364-81258.jpg?size=626&ext=jpg&ga=GA1.2.209329912.1680195530&semt=ais",
+    "price": 19.99,
+    "rating": 4.5
+  },
+  {
+    "_id": "2",
+    "name": "Spice Speedster",
+    "sub-category_id": 1,
+    "sub-category_name": "Sports Car",
+    "image": "https://img.freepik.com/free-vector/convertible-car-cartoon-sticker-white-background_1308-76460.jpg?size=626&ext=jpg&ga=GA1.2.209329912.1680195530&semt=ais",
+    "price": 24.99,
+    "rating": 4.2
+  },
+  {
+    "_id": "3",
+    "name": "Curry Cruiser",
+    "sub-category_id": 1,
+    "sub-category_name": "Sports Car",
+    "image": "https://img.freepik.com/free-vector/red-car-with-big-eyes-carton-character-isolated_1308-46902.jpg?size=626&ext=jpg&ga=GA1.2.209329912.1680195530&semt=ais",
+    "price": 14.99,
+    "rating": 4.1
+  },
+  {
+    "_id": "4",
+    "name": "Biryani Blazer",
+    "sub-category_id": 2,
+    "sub-category_name": "Regular Car",
+    "image": "https://img.freepik.com/free-vector/red-vintage-convertible-car-cartoon-style_1308-107807.jpg?size=626&ext=jpg&ga=GA1.2.209329912.1680195530&semt=ais",
+    "price": 29.99,
+    "rating": 4.7
+  },
+  {
+    "_id": "5",
+    "name": "Dump truck",
+    "sub-category_id": 3,
+    "sub-category_name": "Truck",
+    "image": "https://img.freepik.com/free-vector/vector-yellow-dump-truck-unloading-side-view-illustration-isolated-white-background_8130-972.jpg?size=626&ext=jpg&ga=GA1.2.209329912.1680195530&semt=ais",
+    "price": 19.99,
+    "rating": 4.3
+  },
+  {
+    "_id": "6",
+    "name": "Naan Navigator",
+    "sub-category_id": 1,
+    "sub-category_name": "Sports Car",
+    "image": "https://img.freepik.com/free-vector/boy-driving-vintage-car-cartoon-design_1308-107242.jpg?size=626&ext=jpg&ga=GA1.2.209329912.1680195530&semt=ais",
+    "price": 16.99,
+    "rating": 4.4
+  },
+  {
+    "_id": "7",
+    "name": "Masala Mover",
+    "sub-category_id": 2,
+    "sub-category_name": "Regular Car",
+    "image": "https://img.freepik.com/free-photo/fun-hippo-3d-illustration_183364-81056.jpg?size=626&ext=jpg&ga=GA1.2.209329912.1680195530&semt=ais",
+    "price": 21.99,
+    "rating": 4.2
+  },
+  {
+    "_id": "8",
+    "name": "Chaat Charger",
+    "sub-category_id": 2,
+    "sub-category_name": "Regular Car",
+    "image": "https://img.freepik.com/free-vector/red-racing-car_1308-41588.jpg?size=626&ext=jpg&ga=GA1.2.209329912.1680195530&semt=ais",
+    "price": 24.99,
+    "rating": 4.6
+  },
+  {
+    "_id": "9",
+    "name": "Flatbed Truck",
+    "sub-category_id": 3,
+    "sub-category_name": "Truck",
+    "image": "https://img.freepik.com/premium-photo/dump-track-toy-loaded-with-blocks_470606-617.jpg?w=900",
+    "price": 17.99,
+    "rating": 4.3
+  }
+]

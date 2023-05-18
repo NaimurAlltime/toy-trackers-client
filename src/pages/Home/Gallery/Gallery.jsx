@@ -2,7 +2,7 @@ const Gallery = () => {
   return (
     <div className="container mx-auto px-5 py-2 lg:px-28 lg:pt-24">
       <div className="text-center mb-3">
-        <h2 className="text-4xl font-bold">Photo Gallery</h2>
+        <h2 className="text-3xl font-bold">Photo Gallery</h2>
         <p className="text-lg font-medium mt-3">
           Hello! Welcome to toy trackers Photo Gallery with creative & unique
           style
