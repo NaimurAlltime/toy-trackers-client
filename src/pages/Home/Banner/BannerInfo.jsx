@@ -15,7 +15,9 @@ const BannerInfo = () => {
           toy trackers, straight to your door.
         </p>
         <div className="mt-7">
-          <button className="btn btn-info  mr-4">Get Started</button>
+          <button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500">
+            Get Started
+          </button>
         </div>
       </div>
     </div>

@@ -42,7 +42,7 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <Link className="btn btn-ghost normal-case text-xl">
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
           <img className="w-[42px]" src={logo} alt="" />
           <h2 className="text-3xl font-bold">Toy Trackers</h2>
         </Link>
@@ -51,7 +51,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-outline btn-info">Login</button>
+        <button className="btn btn-outline btn-info">
+          <Link to="/login">Login</Link>
+        </button>
       </div>
     </div>
   );

@@ -32,7 +32,13 @@ const Categories = () => {
           <ToyCars></ToyCars>
         </TabPanel>
         <TabPanel>
-          <ToyCars></ToyCars>
+          <h2>Sports Car</h2>
+        </TabPanel>
+        <TabPanel>
+          <h2>Truck</h2>
+        </TabPanel>
+        <TabPanel>
+          <h2>Regular Car</h2>
         </TabPanel>
       </Tabs>
     </div>

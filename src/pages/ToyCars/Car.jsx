@@ -18,7 +18,9 @@ const Car = ({ car }) => {
         <h2 className="card-title">{name}</h2>
         <p className="text-left text-xl">${price}</p>
         <div className="card-actions">
-          <button className="btn btn-info">View Details</button>
+          <button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500">
+            View Details
+          </button>
         </div>
       </div>
     </div>
