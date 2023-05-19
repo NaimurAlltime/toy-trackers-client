@@ -2,7 +2,7 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 
 const Car = ({ car }) => {
-  const { name, image, price, rating } = car;
+  const { toyName, image, price, rating } = car;
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <figure>
@@ -15,7 +15,7 @@ const Car = ({ car }) => {
             ({rating} Review)
           </span>
         </div>
-        <h2 className="card-title">{name}</h2>
+        <h2 className="card-title">{toyName}</h2>
         <p className="text-left text-xl">${price}</p>
         <div className="card-actions">
           <button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500">
