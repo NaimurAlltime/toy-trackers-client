@@ -1,9 +1,58 @@
-import { Link } from "react-router-dom";
-import SocialLogin from "../SocialLogin/SocialLogin";
+import { useContext, useState } from "react";
+import { FcGoogle } from "react-icons/fc";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  const { SignInUser, googleSignIn } = useContext(AuthContext);
+
   const handleLogin = (event) => {
     event.preventDefault();
+
+    setError("");
+    setSuccess("");
+
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    // console.log(email, password);
+
+    // sign in user
+    SignInUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        setError("");
+        form.reset();
+        setSuccess("User Login Successful!");
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+      });
+  };
+
+  //   google sign in
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        setError("");
+        setSuccess("Google Sign In Successful!");
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+      });
   };
 
   return (
@@ -59,6 +108,8 @@ const Login = () => {
                   />
                 </div>
               </form>
+              <p className="text-center text-red-400">{error}</p>
+              <p className="text-center text-emerald-400">{success}</p>
               <p className="my-4 text-center">
                 New to Toy Trackers?{" "}
                 <Link className="text-blue-500 font-bold" to="/sign-up">
@@ -66,7 +117,14 @@ const Login = () => {
                 </Link>
               </p>
               <div className="divider mt-0">OR</div>
-              <SocialLogin></SocialLogin>
+              <div className="text-center mt-0">
+                <button
+                  onClick={handleGoogleSignIn}
+                  className="btn btn-info btn-outline"
+                >
+                  <FcGoogle className="text-4xl mr-4" /> Sign-in With Google
+                </button>
+              </div>
             </div>
           </div>
         </div>

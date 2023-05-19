@@ -1,10 +1,70 @@
-import { Link } from "react-router-dom";
-import SocialLogin from "../SocialLogin/SocialLogin";
+import { useContext, useState } from "react";
+import { FcGoogle } from "react-icons/fc";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignUp = () => {
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const { createUser, googleSignIn, updateUserProfile, logOut } =
+    useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleSignUp = (event) => {
     event.preventDefault();
+
+    setError("");
+    setSuccess("");
+
+    const form = event.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    // console.log(name, photo, email, password);
+
+    // password validation
+    if (password.length < 6) {
+      setError("Please add at least 6 characters in your password");
+      return;
+    }
+
+    // create User With Email And Password
+    createUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        setSuccess("User has been created successful!");
+        // window.location.reload(true);
+        //   update user profile
+        navigate("/login");
+        logOut();
+        updateUserProfile(loggedUser, name, photo);
+        setError("");
+        form.reset();
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+      });
   };
+
+  //   google sign in
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        setError("");
+        setSuccess("Google Sign In Successful!");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+      });
+  };
+
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
@@ -57,7 +117,7 @@ const SignUp = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Confirm Password</span>
+                  <span className="label-text">Password</span>
                 </label>
                 <input
                   type="password"
@@ -81,6 +141,8 @@ const SignUp = () => {
                 />
               </div>
             </form>
+            <p className="text-center text-red-400">{error}</p>
+            <p className="text-center text-emerald-400">{success}</p>
             <p className="my-3 text-center">
               Already have an account?{" "}
               <Link className="text-blue-500 font-bold mb-0" to="/login">
@@ -88,7 +150,14 @@ const SignUp = () => {
               </Link>
             </p>
             <div className="divider mt-0">OR</div>
-            <SocialLogin></SocialLogin>
+            <div className="text-center mt-0">
+              <button
+                onClick={handleGoogleSignIn}
+                className="btn btn-info btn-outline"
+              >
+                <FcGoogle className="text-4xl mr-4" /> Sign-in With Google
+              </button>
+            </div>
           </div>
         </div>
       </div>
