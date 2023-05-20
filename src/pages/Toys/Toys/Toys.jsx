@@ -3,6 +3,7 @@ import TableRow from "./TableRow";
 
 const Toys = () => {
   const toys = useLoaderData();
+  let index = 1;
 
   return (
     <div>
@@ -12,11 +13,7 @@ const Toys = () => {
           {/* head */}
           <thead>
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
+              <th>SL</th>
               <th>Seller</th>
               <th>Toy Name</th>
               <th>Sub-category</th>
@@ -27,7 +24,7 @@ const Toys = () => {
           </thead>
           <tbody>
             {toys.map((toy) => (
-              <TableRow key={toy._id} toy={toy}></TableRow>
+              <TableRow key={toy._id} toy={toy} index={index++}></TableRow>
             ))}
           </tbody>
         </table>
