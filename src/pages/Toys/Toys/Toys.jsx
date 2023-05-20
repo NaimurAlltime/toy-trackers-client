@@ -6,7 +6,7 @@ const Toys = () => {
   let index = 1;
 
   return (
-    <div>
+    <div className="bg-green-50 my-5">
       <h3>Your Toys: {toys._id} </h3>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
