@@ -19,7 +19,7 @@ const TableRow = ({ myToy, index, handleDelete }) => {
       </td>
 
       <th>
-        <Link>
+        <Link to={`/update/toy/${_id}`}>
           <button className="btn btn-info btn-xs mr-3">Update</button>
         </Link>
         <Link>
