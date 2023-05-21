@@ -1,3 +1,4 @@
+import OfferCollection from "../../offerCollection/offerCollection";
 import ToyBlogs from "../../ToyBlogs/ToyBlogs";
 import Banner from "../Banner/Banner";
 import Categories from "../Categories/Categories";
@@ -9,6 +10,7 @@ const Home = () => {
       <Banner></Banner>
       <Gallery></Gallery>
       <Categories></Categories>
+      <OfferCollection></OfferCollection>
       <ToyBlogs></ToyBlogs>
     </div>
   );

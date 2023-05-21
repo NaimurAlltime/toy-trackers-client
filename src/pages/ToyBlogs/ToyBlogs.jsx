@@ -11,7 +11,7 @@ const ToyBlogs = () => {
   }, []);
 
   return (
-    <div className="mt-12 mb-6">
+    <div className="mt-16 mb-7">
       <h3 className="text-3xl font-bold text-center">Toy Blog</h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-6">
         {blogs.map((blog) => (
