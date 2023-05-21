@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const AddToy = () => {
@@ -42,7 +43,7 @@ const AddToy = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          alert("Toy added successful!");
+          toast("Toy added successful!");
           form.reset();
         }
       });
@@ -210,6 +211,7 @@ const AddToy = () => {
               value="Add Toy"
             />
           </div>
+          <ToastContainer />
         </div>
       </form>
     </div>

@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import Swal from "sweetalert2";
+import { toast, ToastContainer } from "react-toastify";
 
 const UpdateToy = () => {
   const toy = useLoaderData();
@@ -30,7 +30,7 @@ const UpdateToy = () => {
       .then((data) => {
         console.log(data);
         if (data.modifiedCount > 0) {
-          Swal.fire("Success!", "Toy Updated Successfully!", "success");
+          toast("Toy Updated successful!");
         }
       });
   };
@@ -101,6 +101,7 @@ const UpdateToy = () => {
               value="Update Toy"
             />
           </div>
+          <ToastContainer />
         </div>
       </form>
     </div>
