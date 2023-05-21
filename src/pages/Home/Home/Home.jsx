@@ -1,3 +1,4 @@
+import ToyBlogs from "../../ToyBlogs/ToyBlogs";
 import Banner from "../Banner/Banner";
 import Categories from "../Categories/Categories";
 import Gallery from "../Gallery/Gallery";
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner></Banner>
       <Gallery></Gallery>
       <Categories></Categories>
+      <ToyBlogs></ToyBlogs>
     </div>
   );
 };
