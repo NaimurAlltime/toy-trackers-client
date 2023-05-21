@@ -23,12 +23,16 @@ const Navbar = () => {
       <li>
         <Link to="/toys">All Toys</Link>
       </li>
-      <li>
-        <Link to="/my-toys">My Toys</Link>
-      </li>
-      <li>
-        <Link to="/add-toy">Add Toy</Link>
-      </li>
+      {user && (
+        <li>
+          <Link to="/my-toys">My Toys</Link>
+        </li>
+      )}
+      {user && (
+        <li>
+          <Link to="/add-toy">Add Toy</Link>
+        </li>
+      )}
       <li>
         <Link to="/blogs">Blogs</Link>
       </li>
