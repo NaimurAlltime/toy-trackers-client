@@ -1,7 +1,9 @@
 import { Link, useRouteError } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const ErrorPage = () => {
   const { error, status } = useRouteError();
+  useTitle("Error page");
   return (
     <div className="px-5 mx-auto my-5">
       <img

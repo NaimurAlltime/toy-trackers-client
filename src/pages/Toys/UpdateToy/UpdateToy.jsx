@@ -1,9 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import useTitle from "../../../hooks/useTitle";
 
 const UpdateToy = () => {
   const toy = useLoaderData();
   const { _id, price, quantity, details } = toy;
+
+  useTitle("Update Toy");
 
   const handleUpdateToy = (event) => {
     event.preventDefault();
@@ -19,7 +22,7 @@ const UpdateToy = () => {
     console.log(updatedToy);
 
     // data fetching post api
-    fetch(`http://localhost:5000/toys/${_id}`, {
+    fetch(`https://toy-trackers-server.vercel.app/toys/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

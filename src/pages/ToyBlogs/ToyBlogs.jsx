@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
+import useTitle from "../../hooks/useTitle";
 import BlogCard from "./BlogCard";
 
 const ToyBlogs = () => {
   const [blogs, setBlogs] = useState([]);
 
+  useTitle("Toy Blog");
+
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://toy-trackers-server.vercel.app/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);

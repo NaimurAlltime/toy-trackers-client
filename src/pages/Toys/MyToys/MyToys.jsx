@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import useTitle from "../../../hooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import TableRow from "./TableRow";
 
@@ -8,7 +9,9 @@ const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
   let index = 1;
 
-  const url = `http://localhost:5000/mytoys?email=${user?.email}`;
+  useTitle("My Toys");
+
+  const url = `https://toy-trackers-server.vercel.app/mytoys?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -28,7 +31,7 @@ const MyToys = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // delete to database
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://toy-trackers-server.vercel.app/toys/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

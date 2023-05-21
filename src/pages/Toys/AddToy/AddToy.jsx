@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import useTitle from "../../../hooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
+
+  useTitle("Add Toy");
 
   const handleAddToy = (event) => {
     event.preventDefault();
@@ -32,7 +35,7 @@ const AddToy = () => {
     console.log(toy);
 
     // data fetching post api
-    fetch("http://localhost:5000/toys", {
+    fetch("https://toy-trackers-server.vercel.app/toys", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

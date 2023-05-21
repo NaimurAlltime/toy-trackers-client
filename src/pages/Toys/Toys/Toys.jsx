@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useTitle from "../../../hooks/useTitle";
 import TableRow from "./TableRow";
 
 const Toys = () => {
@@ -7,15 +8,17 @@ const Toys = () => {
   const [search, setSearch] = useState("");
   let index = 1;
 
+  useTitle("All Toys");
+
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://toy-trackers-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
 
   const handleSearch = (event) => {
     event.preventDefault();
-    fetch(`http://localhost:5000/toySearch/${search}`)
+    fetch(`https://toy-trackers-server.vercel.app/toySearch/${search}`)
       .then((res) => res.json())
       .then((data) => setToys(data));
   };

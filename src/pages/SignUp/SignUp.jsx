@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignUp = () => {
+  useTitle("Sign Up");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const { createUser, googleSignIn, updateUserProfile, logOut } =

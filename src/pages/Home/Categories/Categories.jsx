@@ -9,7 +9,7 @@ const Categories = () => {
   const [activeTab, setActiveTab] = useState("Sports Car");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/subCategory/${activeTab}`)
+    fetch(`https://toy-trackers-server.vercel.app/subCategory/${activeTab}`)
       .then((res) => res.json())
       .then((result) => {
         setToys(result);
