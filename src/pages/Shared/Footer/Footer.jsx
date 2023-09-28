@@ -5,11 +5,12 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200  text-base-content mt-8 py-8">
-      <div className="container mx-auto px-4">
+    <footer className="text-base-content bg-gradient-to-r from-[rgba(71, 171, 225, 0.893)] via-[rgba(67, 173, 229, 0.267)] to-[rgba(71, 171, 225, 0.893)] mt-8 py-8 poligon h-full">
+      <div className="container mx-auto px-6 pt-28 md:pt-14">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/4">
             <div>

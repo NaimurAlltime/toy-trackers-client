@@ -1,8 +1,9 @@
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import { Link } from "react-router-dom";
 
 const CategoryToy = ({ toy }) => {
-  const { toyName, image, price, rating } = toy;
+  const { _id, toyName, image, price, rating } = toy;
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <figure>
@@ -18,9 +19,11 @@ const CategoryToy = ({ toy }) => {
         <h2 className="card-title">{toyName}</h2>
         <p className="text-left text-xl">${price}</p>
         <div className="card-actions">
-          <button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500">
-            View Details
-          </button>
+          <Link to={`/toy/${_id}`}>
+            <button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
