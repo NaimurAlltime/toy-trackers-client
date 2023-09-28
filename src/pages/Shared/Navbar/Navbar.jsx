@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import "./Navbar.css";
 
 import logo from "/logo1.png";
 
@@ -39,7 +40,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 h-28">
+    <div className="navbar sticky top-0 z-10 bg-gray-100 drop-shadow-1 py-4 px-0 md:px-3">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -66,8 +67,10 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
-          <img className="w-[42px]" src={logo} alt="" />
-          <h2 className="text-3xl font-bold">Toy Trackers</h2>
+          <img className="w-[42px] hidden md:block" src={logo} alt="" />
+          <h2 className="text-2xl md:text-3xl font-bold ms-0 md:ms-1">
+            Toy Trackers
+          </h2>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
