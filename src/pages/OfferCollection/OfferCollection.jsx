@@ -1,8 +1,8 @@
 const OfferCollection = () => {
   return (
-    <div className=" mt-16">
+    <div className="max-w-screen-xl mx-auto mt-16">
       <h3 className="text-3xl font-bold text-center">Offer Collection</h3>
-      <div className="container md:flex items-center gap-5">
+      <div className="container md:flex items-center gap-5 p-2 md:p-0">
         <div className="relative w-full md:w-1/2 mt-5">
           <img
             src="https://i.ibb.co/9hfRtJ2/urban-taxi-delivery-service-concept-toy-yellow-car-model-copy-space-text-banner-online-mobile-applic.jpg"
