@@ -30,7 +30,7 @@ const Categories = () => {
           <Tab onClick={() => handleTabClick("Regular Car")}>Regular Car</Tab>
         </TabList>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5">
+        <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5">
           {toys.map((toy) => (
             <CategoryToy key={toy._id} toy={toy}></CategoryToy>
           ))}
