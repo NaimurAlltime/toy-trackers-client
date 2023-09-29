@@ -2,7 +2,7 @@ import BannerInfo from "./BannerInfo";
 
 const Banner = () => {
   return (
-    <div className="carousel w-full h-[600px]">
+    <div className="carousel w-full h-[650px]">
       <div id="slide1" className="carousel-item relative w-full">
         <img
           src="https://img.freepik.com/premium-photo/toy-truck-car-blue-background_528985-2606.jpg?w=1060"

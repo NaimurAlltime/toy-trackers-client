@@ -1,7 +1,7 @@
 const BannerInfo = () => {
   return (
     <div className="absolute flex rounded-lg items-center h-full left-0 top-0 pr-16 pb-7 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-      <div className="text-white space-y-7 ml-20">
+      <div className="text-white space-y-7 ml-20 md:ml-36">
         <h2 className="text-6xl font-bold">
           Find your best
           <br />
