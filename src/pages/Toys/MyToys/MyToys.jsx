@@ -48,8 +48,7 @@ const MyToys = () => {
   };
 
   return (
-    <div className="bg-green-50 my-5">
-      <h3>My Toys: {myToys.length} </h3>
+    <div className="max-w-screen-xl mx-auto bg-green-50 my-5">
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
