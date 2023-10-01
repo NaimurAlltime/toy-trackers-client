@@ -24,7 +24,7 @@ const Toys = () => {
   };
 
   return (
-    <div className="bg-green-50 my-5">
+    <div className="max-w-screen-xl mx-auto bg-green-50 my-5">
       <div className="flex items-center">
         <div className="flex border border-purple-200 rounded">
           <input
@@ -41,7 +41,7 @@ const Toys = () => {
           </button>
         </div>
       </div>
-      <div className="overflow-x-auto w-full">
+      <div className="overflow-x-auto w-full mt-3">
         <table className="table w-full">
           {/* head */}
           <thead>
